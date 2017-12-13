@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0809514A1FE187DF002E02A7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080951491FE187DF002E02A7 /* RoundButton.swift */; };
+		089BCEA91FE1DFEA00A5289D /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089BCEA81FE1DFE900A5289D /* imageViewController.swift */; };
 		08CBCFF71FDAAF98005A67EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCFF61FDAAF98005A67EE /* AppDelegate.swift */; };
 		08CBCFF91FDAAF98005A67EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCFF81FDAAF98005A67EE /* ViewController.swift */; };
 		08CBCFFC1FDAAF98005A67EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCFFA1FDAAF98005A67EE /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080951491FE187DF002E02A7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		089BCEA81FE1DFE900A5289D /* imageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
 		08CBCFF31FDAAF98005A67EE /* Picca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCFF61FDAAF98005A67EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCFF81FDAAF98005A67EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +58,9 @@
 		08CBCFF51FDAAF98005A67EE /* Picca */ = {
 			isa = PBXGroup;
 			children = (
+				089BCEA81FE1DFE900A5289D /* imageViewController.swift */,
 				08CBCFF61FDAAF98005A67EE /* AppDelegate.swift */,
+				080951491FE187DF002E02A7 /* RoundButton.swift */,
 				08CBCFF81FDAAF98005A67EE /* ViewController.swift */,
 				08CBCFFA1FDAAF98005A67EE /* Main.storyboard */,
 				08CBCFFD1FDAAF98005A67EE /* Assets.xcassets */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0809514A1FE187DF002E02A7 /* RoundButton.swift in Sources */,
 				08CBCFF91FDAAF98005A67EE /* ViewController.swift in Sources */,
+				089BCEA91FE1DFEA00A5289D /* imageViewController.swift in Sources */,
 				08CBCFF71FDAAF98005A67EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
