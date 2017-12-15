@@ -312,10 +312,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="Z8W-Xi-5Vv"/>
                                 </constraints>
-                                <state key="normal" title="Sign up">
-                                    <color key="titleColor" red="0.93608587980270386" green="0.60247188806533813" blue="0.45485305786132812" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sign up"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
                                         <color key="value" red="0.85957932469999998" green="0.40118402240000001" blue="0.29446059470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

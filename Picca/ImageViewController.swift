@@ -20,41 +20,36 @@ class imageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //Create outlets
     @IBOutlet weak var uiImageView: UIImageView!
-    
     @IBOutlet weak var likeButton: UIButton!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var IDLabel: UILabel!
     @IBOutlet weak var photographerLabel: UILabel!
-    
+    @IBOutlet weak var infoView: UIStackView!
     
     var oldImageData: Photo?
-    
-    // Shadow and Radius for Circle Button
 
     @IBAction func likeButtonPressed(_ sender: Any) {
         setNewPhoto(like: true)
-        
-        print("Like button pressed!")
     }
     
     @IBAction func dislikeButtonPressed(_ sender: Any) {
         setNewPhoto(like: false)
-        print("Dislike button pressed!")
     }
     
+    
     @IBAction func closePressed(_ sender: Any) {
-        print("Close button pressed")
+        //Disable the info popup.
         infoView.isHidden = true
     }
     
     @IBAction func infoButtonPressed(_ sender: Any) {
-        print("Info Button Pressed")
+        //Show the photo info popup.
         infoView.isHidden = false
     }
     
+    //Define the codable structs as they are used in the API.
     struct Urlstruct: Codable {
         var raw: String?
         var full: String?
@@ -62,6 +57,7 @@ class imageViewController: UIViewController {
         var small: String?
         var thumb: String?
     }
+    
     struct User: Codable {
         var id: String?
         var username: String?
@@ -81,21 +77,17 @@ class imageViewController: UIViewController {
         var id: String?
     }
 
-    @IBOutlet weak var infoView: UIStackView!
-
-    
+    //Call the unslplash API, decode the photo data contents and return them.
     func callAPI() -> Photo?{
         let url = URL(string: "https://api.unsplash.com/photos/random/?client_id=d045418f560e79b6e822ec2329ebc03de8bdadd2e180ce9044b4e663e3e25159&orientation=landscape&featured=True")!
-        
         guard let data = try? Data(contentsOf: url) else{return nil}
         let jsonDec = JSONDecoder()
         guard let result = try? jsonDec.decode(Photo.self, from: data) else{ return nil}
         return result
-        
     }
     
     func setNewPhoto(like: Bool){
-        
+        //Add image to the likes collection on firebase if the like button was pressed.
         if(like){
             let likesRef = Database.database().reference(withPath: "likes")
             let reference  = likesRef.childByAutoId()
@@ -106,42 +98,47 @@ class imageViewController: UIViewController {
            
         }
         
-        
+        //Unwrap Image
         guard let CurrentImageData = callAPI() else {
             print("There is no Image")
             setNewPhoto(like: like)
             return
         }
     
+        //Unwrap Image URL
         guard let CurrentImageURL = CurrentImageData.urls?.regular else {
             print("There is no Image URL")
             setNewPhoto(like: like)
             return
         }
         
+        //Save current image to be able to add to firebase later on.
         oldImageData = CurrentImageData
         
-        if let CurrentImagePhotographer = CurrentImageData.user?.username {
+        // Unwrap and set the photo description, photographer and id.
+        if let CurrentImagePhotographer = CurrentImageData.user?.username, let CurrentImageDescription = CurrentImageData.description, let CurrentImageID = CurrentImageData.id {
             photographerLabel.text = CurrentImagePhotographer
-        } else {
-            print("There is no photographer")
-        }
-        
-        if let CurrentImageDescription = CurrentImageData.description {
             descriptionLabel.text = CurrentImageDescription
-        } else {
-            print("There is no description.")
-        }
-        
-        
-        if let CurrentImageID = CurrentImageData.id {
             IDLabel.text = CurrentImageID
         } else {
-            print("There is no id")
+            print("There is no photographer, description or id.")
         }
         
+//        if let CurrentImageDescription = CurrentImageData.description {
+//            descriptionLabel.text = CurrentImageDescription
+//        } else {
+//            print("There is no description.")
+//        }
+//
+//
+//        if let CurrentImageID = CurrentImageData.id {
+//            IDLabel.text = CurrentImageID
+//        } else {
+//            print("There is no id")
+//        }
         
         
+        //Grab the image from the url specified in the data returned by the API and place in the ImageView.
         let session = URLSession(configuration: .default)
         //creating a dataTask
         let getImageFromUrl = session.dataTask(with: CurrentImageURL) { (data, response, error) in
