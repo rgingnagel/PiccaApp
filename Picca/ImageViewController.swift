@@ -20,8 +20,6 @@ class imageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //URL containing the image
-//    let URL_IMAGE = URL(string: "https://images.unsplash.com/36/rv1BIw0tSKi0xLtGrpR0_TE3_0185.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=1ce48d2f902c78d8793199668e7592f1")
     
     @IBOutlet weak var uiImageView: UIImageView!
     
@@ -31,8 +29,6 @@ class imageViewController: UIViewController {
     @IBOutlet weak var IDLabel: UILabel!
     @IBOutlet weak var photographerLabel: UILabel!
     
-
-//    var user: ourUser!
     
     var oldImageData: Photo?
     
@@ -90,17 +86,10 @@ class imageViewController: UIViewController {
     
     func callAPI() -> Photo?{
         let url = URL(string: "https://api.unsplash.com/photos/random/?client_id=d045418f560e79b6e822ec2329ebc03de8bdadd2e180ce9044b4e663e3e25159&orientation=landscape&featured=True")!
-//        let url = URL(string: "https://blabla")!
-        
         
         guard let data = try? Data(contentsOf: url) else{return nil}
         let jsonDec = JSONDecoder()
         guard let result = try? jsonDec.decode(Photo.self, from: data) else{ return nil}
-        //    print(result)
-//        guard let photoDescription = result.description, let photoUrl = result.urls?.regular else {return nil}
-//        print(photoUrl)
-//        print(photoDescription)
-
         return result
         
     }
@@ -110,10 +99,10 @@ class imageViewController: UIViewController {
         if(like){
             let likesRef = Database.database().reference(withPath: "likes")
             let reference  = likesRef.childByAutoId()
-            if let oldImageID = oldImageData?.id{
-                reference.setValue(oldImageID)
+            if let oldImageID = oldImageData?.id, let oldImageThumbnail = oldImageData?.urls?.thumb {
+                reference.child("ID").setValue(oldImageID)
+                reference.child("Thumbnail").setValue(oldImageThumbnail)
             }
-            
            
         }
         

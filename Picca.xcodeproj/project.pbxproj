@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0809514A1FE187DF002E02A7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080951491FE187DF002E02A7 /* RoundButton.swift */; };
-		082036321FE32B88008EC964 /* bla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082036311FE32B88008EC964 /* bla.swift */; };
+		082036321FE32B88008EC964 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082036311FE32B88008EC964 /* User.swift */; };
+		083B2C131FE3EF5E00030A8D /* PiccaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083B2C121FE3EF5E00030A8D /* PiccaCollectionViewController.swift */; };
 		0850B6B91FE2DF8A0094F6EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0850B6B81FE2DF8A0094F6EE /* GoogleService-Info.plist */; };
 		0863A47F1FE3248700768C08 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863A47E1FE3248700768C08 /* LoginViewController.swift */; };
-		089BCEA91FE1DFEA00A5289D /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089BCEA81FE1DFE900A5289D /* imageViewController.swift */; };
+		089BCEA91FE1DFEA00A5289D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089BCEA81FE1DFE900A5289D /* ImageViewController.swift */; };
 		08CBCFF71FDAAF98005A67EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCFF61FDAAF98005A67EE /* AppDelegate.swift */; };
 		08CBCFF91FDAAF98005A67EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCFF81FDAAF98005A67EE /* ViewController.swift */; };
 		08CBCFFC1FDAAF98005A67EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCFFA1FDAAF98005A67EE /* Main.storyboard */; };
@@ -22,11 +23,12 @@
 
 /* Begin PBXFileReference section */
 		080951491FE187DF002E02A7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		082036311FE32B88008EC964 /* bla.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = bla.swift; path = "../../../Downloads/Grocr-starter/Grocr/bla.swift"; sourceTree = "<group>"; };
+		082036311FE32B88008EC964 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../../../Downloads/Grocr-starter/Grocr/User.swift"; sourceTree = "<group>"; };
+		083B2C121FE3EF5E00030A8D /* PiccaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiccaCollectionViewController.swift; sourceTree = "<group>"; };
 		0850B6B81FE2DF8A0094F6EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0850B6BA1FE323580094F6EE /* Picca.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Picca.entitlements; sourceTree = "<group>"; };
 		0863A47E1FE3248700768C08 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../Downloads/Grocr-starter/Grocr/LoginViewController.swift"; sourceTree = "<group>"; };
-		089BCEA81FE1DFE900A5289D /* imageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
+		089BCEA81FE1DFE900A5289D /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		08CBCFF31FDAAF98005A67EE /* Picca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCFF61FDAAF98005A67EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCFF81FDAAF98005A67EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,13 +76,14 @@
 			children = (
 				0850B6BA1FE323580094F6EE /* Picca.entitlements */,
 				0863A47E1FE3248700768C08 /* LoginViewController.swift */,
-				089BCEA81FE1DFE900A5289D /* imageViewController.swift */,
-				082036311FE32B88008EC964 /* bla.swift */,
+				089BCEA81FE1DFE900A5289D /* ImageViewController.swift */,
+				082036311FE32B88008EC964 /* User.swift */,
 				08CBCFF61FDAAF98005A67EE /* AppDelegate.swift */,
 				080951491FE187DF002E02A7 /* RoundButton.swift */,
 				08CBCFF81FDAAF98005A67EE /* ViewController.swift */,
 				0850B6B81FE2DF8A0094F6EE /* GoogleService-Info.plist */,
 				08CBCFFA1FDAAF98005A67EE /* Main.storyboard */,
+				083B2C121FE3EF5E00030A8D /* PiccaCollectionViewController.swift */,
 				08CBCFFD1FDAAF98005A67EE /* Assets.xcassets */,
 				08CBCFFF1FDAAF98005A67EE /* LaunchScreen.storyboard */,
 				08CBD0021FDAAF98005A67EE /* Info.plist */,
@@ -250,8 +253,9 @@
 			files = (
 				0809514A1FE187DF002E02A7 /* RoundButton.swift in Sources */,
 				08CBCFF91FDAAF98005A67EE /* ViewController.swift in Sources */,
-				082036321FE32B88008EC964 /* bla.swift in Sources */,
-				089BCEA91FE1DFEA00A5289D /* imageViewController.swift in Sources */,
+				083B2C131FE3EF5E00030A8D /* PiccaCollectionViewController.swift in Sources */,
+				082036321FE32B88008EC964 /* User.swift in Sources */,
+				089BCEA91FE1DFEA00A5289D /* ImageViewController.swift in Sources */,
 				0863A47F1FE3248700768C08 /* LoginViewController.swift in Sources */,
 				08CBCFF71FDAAF98005A67EE /* AppDelegate.swift in Sources */,
 			);
