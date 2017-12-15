@@ -124,20 +124,10 @@ class imageViewController: UIViewController {
             print("There is no photographer, description or id.")
         }
         
-//        if let CurrentImageDescription = CurrentImageData.description {
-//            descriptionLabel.text = CurrentImageDescription
-//        } else {
-//            print("There is no description.")
-//        }
-//
-//
-//        if let CurrentImageID = CurrentImageData.id {
-//            IDLabel.text = CurrentImageID
-//        } else {
-//            print("There is no id")
-//        }
-        
-        
+        setPhotoInterface(CurrentImageURL: CurrentImageURL)
+    }
+    
+    func setPhotoInterface(CurrentImageURL: URL){
         //Grab the image from the url specified in the data returned by the API and place in the ImageView.
         let session = URLSession(configuration: .default)
         //creating a dataTask
@@ -158,14 +148,14 @@ class imageViewController: UIViewController {
                         //getting the image
                         let image = UIImage(data: imageData)
                         
-//                        do{
-//                            try Disk.save(image, to: .caches, as: "currentImage.png")
-//                            try Disk.save(CurrentImageData, to: .caches, as: "currentImageData.json")
-//                            //            let retrieved = try Disk.retrieve("currentImage.json", from: .caches, as: Photo.self)
-//                            //            print(retrieved)
-//                        } catch{
-//                            print("Saving image to disk failed.")
-//                        }
+                        //                        do{
+                        //                            try Disk.save(image, to: .caches, as: "currentImage.png")
+                        //                            try Disk.save(CurrentImageData, to: .caches, as: "currentImageData.json")
+                        //                            //            let retrieved = try Disk.retrieve("currentImage.json", from: .caches, as: Photo.self)
+                        //                            //            print(retrieved)
+                        //                        } catch{
+                        //                            print("Saving image to disk failed.")
+                        //                        }
                         
                         //displaying the image
                         DispatchQueue.main.async() { self.uiImageView.image = image }
@@ -181,6 +171,7 @@ class imageViewController: UIViewController {
         
         //starting the download task
         getImageFromUrl.resume()
+        
         
     }
     
@@ -198,10 +189,6 @@ class imageViewController: UIViewController {
         
         setNewPhoto(like: false)
         
-//        Auth.auth().addStateDidChangeListener { auth, user in
-//            guard let user = user else { return }
-//            self.user = User(authData: user)
-//        }
 //        do{
 //            let retrievedImage = try Disk.retrieve("currentImage.png", from: .caches, as: UIImage.self)
 //            self.uiImageView.image = retrievedImage
