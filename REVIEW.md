@@ -1,10 +1,12 @@
-1. Ik gebruik niet altijd duidelijke namen voor mijn functies en variabelen. Voorbeeld is de functie setPhotoInterface.
-2. Volgende keer is het handiger om de structs in te korten en zo alle properties ook echt te gebruiken. 
-3. Overview scherm is nog niet helemaal af. 
-4. Er zijn twee User structs op dit moment. 
-5. Xcode geeft nog een aantal warnings over de layout. 
-6. Indentation in LoginViewController is niet helemaal mooi. 
-7. arrayLikesCount in PiccaCollectionViewController
-8. De code in ImageViewController voelt nog een beetje ongestructureerd.
-9. De netwerk code in ImageViewController zou in een aparte code of functie kunnen.
-10. ViewController.swift wordt niet gebruikt.
+Review op Picca
+Door Bart Witting
+
+Er missen een aantal files in de github waardoor ik de app niet kan runnen. Er staat ook nog een overbodige file in, die kan je meteen verwijderen.
+Je project kan nog wat netter door bestanden in mapjes te plaatsen. Dit maakt je project overzichtelijker.
+Controllers zijn nog wat warig. Probeer nog wat orde in je functies en variabelen te zetten. 
+Ook kunnen overbodige functies eruit gehaald worden. Bijvoorbeeld onderaan.
+Er mag ook hier en daar nog een comment bij een functie met wat ie doet, zodat alles wat duidelijker te lezen wordt.
+Layout ziet er goed uit! Orgineel dat het een landscape app is!
+Segue's ook netjes benoemd.
+
+App heeft veel potentie. Fix de puntjes hierboven en dan is ie perfect! Ben benieuwd naar het eind resultaat:)
