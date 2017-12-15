@@ -148,15 +148,6 @@ class imageViewController: UIViewController {
                         //getting the image
                         let image = UIImage(data: imageData)
                         
-                        //                        do{
-                        //                            try Disk.save(image, to: .caches, as: "currentImage.png")
-                        //                            try Disk.save(CurrentImageData, to: .caches, as: "currentImageData.json")
-                        //                            //            let retrieved = try Disk.retrieve("currentImage.json", from: .caches, as: Photo.self)
-                        //                            //            print(retrieved)
-                        //                        } catch{
-                        //                            print("Saving image to disk failed.")
-                        //                        }
-                        
                         //displaying the image
                         DispatchQueue.main.async() { self.uiImageView.image = image }
                         
@@ -179,25 +170,9 @@ class imageViewController: UIViewController {
         
         super.viewDidLoad()
         infoView.isHidden = true
-//        do{
-//            try Disk.save(image, to: .caches, as: "currentImage.json")
-//            //            let retrieved = try Disk.retrieve("currentImage.json", from: .caches, as: Photo.self)
-//            //            print(retrieved)
-//        } catch{
-//            print("Saving image to disk failed.")
-//        }
         
         setNewPhoto(like: false)
-        
-//        do{
-//            let retrievedImage = try Disk.retrieve("currentImage.png", from: .caches, as: UIImage.self)
-//            self.uiImageView.image = retrievedImage
-//            
-////            print(retrieved)
-//        } catch{
-//            print("No old image was found.")
-//            setNewPhoto()
-//        }
+
         
     }
 }
